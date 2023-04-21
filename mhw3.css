@@ -1,0 +1,507 @@
+a{
+    cursor:pointer;
+}
+
+:root{
+    --color1: rgb(255, 255, 242);
+    --color2: #aacefad2;
+    --color3: #F0A1BF;
+
+}
+
+body{
+    color: rgba(26, 26, 26, .7);
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+    body {
+      font-size: 14px;
+    }
+}
+
+@font-face {
+    font-family: "Anitas";
+    src: url(Regular.ttf);
+}
+footer,
+#Links,
+#weather h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header{
+    color:white;
+    border-color: black;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/84/Foto_zino_-_panoramio.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+@media (max-width: 500px) {
+    header {
+      height: 300px;
+      line-height: 1.2;
+    }
+}
+
+
+#overlay{
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-between;  */
+    /* justify-items: center; */
+    /* align-items: center; */
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+    /* z-index: 1; */
+}
+@media (max-width: 500px) {
+    overlay {
+        height: 300px;
+        line-height: 1.2;
+    }
+}
+
+#Links {
+    display: flex;
+    /* position: relative;    */
+    font-size: 14px;
+    /* padding: 15px 20px;
+    color: white; */
+    justify-content: space-around;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    /* z-index: 2; */
+}
+
+#Links a{
+    display: flex;
+    /* margin: 15px; */
+    border: 2px solid rgba(75, 179, 54, 0.884);
+    background-color: rgba(75, 179, 54, 0.884);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 100px;
+    /* z-index: 1; */
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+#Links a:hover{
+    background-color: rgba(185, 252, 61, 0.041);
+    border: 0px;
+    color: black;
+}
+
+
+#overlay h1{
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* text-align: center;
+    align-items: center; */
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    /* letter-spacing: 4px; */
+    margin: auto auto;
+    z-index: 1;
+    max-width: 780px;
+
+}
+
+@media (max-width: 500px) {
+    #overlay strong{
+      font-size: 1em;
+      letter-spacing: 4px;
+    }
+
+}
+
+#menu {
+    display: none;
+}
+
+#menu div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+@media (max-width: 500px) {
+#Links {
+    display: none;
+
+}
+
+#menu {
+    display: block;
+
+}
+}
+
+#cerca{
+    
+    display: flex;
+    size: 10px;
+    size-adjust: cover;
+} 
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+form p{
+    margin: 0;
+}
+
+#contenitore{
+    display: flex;
+    flex-direction: row;
+}
+
+/* input #submit{
+    background-image: url("https://media.istockphoto.com/id/1151843591/it/vettoriale/icona-segno-loupe-in-stile-trasparente-illustrazione-vettoriale-lente-di-ingrandimento.jpg?s=612x612&w=0&k=20&c=sRDHFLAGx6j0z63yziBFRzKMbbrK6gofP1gxmpvAeMY=");
+} */
+
+.Profilo {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 3px solid white;
+}
+.Nome{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 0px;
+    color: black;
+
+}
+
+.aggiornamento {
+    display: block;
+    font-size: 15px;
+    width: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: 9px;
+    border-bottom: 1px solid lightgray;
+    color: inherit;
+
+}
+
+@media (max-width: 500px) {
+	.Nome {
+        /*font-size: 40px;*/
+	  font-size: 1em;
+	}
+    .aggiornamento{
+        font-size: 1em;
+    }
+}
+
+button.cerca{
+    margin: 5px;
+}
+
+form p{
+    margin: 2px;
+}
+
+.show_ricette{    
+    display: none;
+    /* margin: 10px;     */
+    /* margin-bottom: 50px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.show_ricette .ric{
+    display: flex;
+    flex-direction: column;
+    background-color: #daf5cc;
+    margin-bottom: 20px;
+    border: solid #dcdcdc 1px;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.show_ricette span{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.show_ricette img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.show_ricette p{
+    max-width: 300px;
+    margin: 0;
+}
+
+button.api_pixabay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(75, 179, 54, 0.884);
+    /* border-radius: 40%; */
+    width: 20%;
+    height: 40px;
+    color: inherit;
+    border: 3px solid #daf5cc;
+    margin: 20px auto 20px auto;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: inherit;
+    border: 3px solid #daf5cc;
+    color: black;
+}
+
+.pixabay{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+}
+
+.show_images{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    /* align-content: space-between; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.show_images img{
+    background-color: #daf5cc;
+    width: calc(32.5%);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid #dcdcdc 1px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* cursor: pointer; */
+}
+
+.tutto{
+    margin-top: 60px;
+}
+
+@media (max-width: 500px) {
+    .tutto {
+      margin: 40px 10px;
+    }
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.indice{
+    font-size: 40px;
+    margin-right: 40px;
+    text-align: left;
+    /*color: inherit;*/
+}
+
+.contenuto{
+    width: 66.67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.Titolo {
+    margin-top: 0px;
+    color: black;
+    text-align:left;
+}
+@media (max-width: 500px) {
+    .Titolo {
+      width: 90%;
+      margin-bottom: 2em;
+    }
+}
+
+.Titolo h1{
+    margin: 0px;
+}
+
+.voto{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:rgba(75, 179, 54, 0.884);
+}
+
+
+.details p{
+    margin: 20px 0px 20px 0px;
+    font-weight: bolder;
+}
+
+
+.details img{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 120px;
+    margin-top: 0px;
+
+}
+
+.val{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+    #details {
+      flex-direction: column;
+    }
+}
+
+footer{
+    /* position: fixed; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(31, 31, 31);
+    color:rgba(255, 255, 255, 0.8);
+    /* padding: 75px; */
+    text-align: center;
+    justify-content: center;
+    padding: 75px 0px;
+    height: 100px;
+    line-height: 2;
+    font-weight: 200;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%
+}
+
+#container p{
+    margin: 0;
+}
+
+@media (max-width:500px){
+    footer{
+        height: 70px;
+        padding: 25px 0px;
+    }
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, .4);
+}
+
+#weather{
+    background-color: rgba(94, 241, 64, 0.432);
+    border-radius: 300%;
+    margin: 5%;
+    padding: 1%;
+    font-weight: 300;
+    color: black;
+    font-family: 'Source Serif Pro',sans-serif;
+    width: 20%;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#weather img{
+
+    border-radius: 100%;
+    background-color: var(--color2);
+    padding: 2%;
+    max-width: 12%;
+    max-height: 12%;
+    margin-bottom: 10px;
+}
+
+#weather h1{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    /* margin: 0; */
+    font-family: 'Bebas Neue', cursive;
+}
+
+#weather p{
+    font-size: 12px;
+    color: rgba(255, 255, 255, .8);
+}
+
+@media(max-width:500px){
+    #weather{
+        font-size: 10px;
+        line-height: 1;
+        width:30%;
+    }
+}
